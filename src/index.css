@@ -1,0 +1,75 @@
+:root {
+    --border-grey: #ECECEC;
+    --hover-green-1: rgba(100, 200, 0, .1);
+    --hover-green-2: rgba(100, 200, 0, .2);
+    --black-10: rgba(0,0,0,1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* CSS BEM
+block-name__element-name--modifier-name
+block-name__element-name
+block-name--modifier-name
+*/
+.table {
+    border: solid 1px var(--border-grey);
+    border-collapse: collapse;
+    /*margin: 16px;*/
+    box-shadow: 0 0 4px 0;
+    width: 100%;
+}
+
+.table > thead {
+    background: var(--black-10);
+    color: white;
+}
+
+.table__header-cell {
+    border: solid 1px var(--border-grey);
+    padding: 16px;
+}
+
+.table__body-row {
+    border: solid 1px var(--border-grey);
+}
+
+.table__body-row:hover {
+    background: var(--hover-green-1);
+    cursor: pointer;
+}
+
+.table__body-cell {
+    border: solid 1px var(--border-grey);
+    padding: 16px;
+}
+
+.table__body-cell:hover {
+    background: var(--hover-green-2);
+}
+
+.table__footer-cell {
+    padding: 16px;
+    border: solid 1px var(--border-grey);
+}
+
+.column-visibility-bar {
+    padding: 16px;
+    background: #ECECEC;
+}
+
+.column-visibility-bar > label {
+    margin: 4px;
+}
+
+.column-visibility-bar > button {
+    display: block;
+    margin-top: 8px;
+    cursor: pointer;
+}
